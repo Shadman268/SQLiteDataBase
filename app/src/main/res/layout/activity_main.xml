@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_marginRight="20dp"
+            android:id="@+id/NameTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/NameEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_marginRight="40dp"
+            android:id="@+id/AgeTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/AgeEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_marginRight="10dp"
+            android:id="@+id/GenderTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/GenderEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/AddButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD DATA"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        />
+
+</LinearLayout>
