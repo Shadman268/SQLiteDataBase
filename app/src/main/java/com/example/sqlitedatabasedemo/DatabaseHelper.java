@@ -2,6 +2,7 @@ package com.example.sqlitedatabasedemo;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String GENDER = "Gender";
     private static final String CREATE_TABLE = "CREATE TABLE " +TABLE_NAME+ "("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT, " +NAME+ "  VARCHAR(255)," +AGE+ " INTEGER ," +GENDER+ " VARCHAR(15)); ";
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS " +TABLE_NAME;
+    private static final String SELECT_ALL = " SELECT * FROM " +TABLE_NAME ;
 
     private Context context;
 
@@ -70,5 +72,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("Gender",gender);
         long rowId = db.insert(TABLE_NAME,null,contentValues);
         return rowId;
+    }
+
+    public Cursor displayData()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor =  db.rawQuery(SELECT_ALL , null);
+        return cursor;
     }
 }
